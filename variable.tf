@@ -5,7 +5,7 @@ variable "context" {
 
 variable "redis_cache_name" {
   type        = string
-  default = "local-default"
+  default = "redis-local-default"
 }
 
 variable "port" {
