@@ -1,3 +1,12 @@
+terraform {
+  required_providers {
+    kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = ">= 2.0"
+    }
+  }
+}
+
 resource "kubernetes_deployment" "redis" {
   metadata {
     name = "redis-${sha512(var.context.resource.id)}"
