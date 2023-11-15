@@ -3,6 +3,11 @@ variable "context" {
   type = any
 }
 
+variable "redis_cache_name" {
+  type        = string
+  default = "local-default"
+}
+
 variable "port" {
   description = "The port Redis is offered on. Defaults to 6379."
   type = number
