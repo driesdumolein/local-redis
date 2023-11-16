@@ -17,3 +17,8 @@ output "result" {
   description = "The result of the Recipe. Must match the target resource's schema."
   sensitive = true
 }
+
+
+output "context" {
+  value = var.context
+}
