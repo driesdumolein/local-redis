@@ -16,6 +16,8 @@ resource "kubernetes_deployment" "redis" {
     }
   }
   spec {
+    replicas = 2
+
     selector {
       match_labels = {
         app = "redis"
