@@ -21,17 +21,17 @@ terraform {
 
 }
 
-//provider "azurerm" {
-//  features {}
-//  skip_provider_registration = true
-//  use_cli = false
-//}
+provider "azurerm" {
+  features {}
+  skip_provider_registration = true
+  use_cli = false
+}
 
 
-//resource "azurerm_resource_group" "state-demo-secure" {
-//  name     = "plf-state-demo-1"
-//  location = "West Europe"
-//}
+resource "azurerm_resource_group" "state-demo-secure" {
+  name     = "plf-state-demo-1"
+  location = "West Europe"
+}
 
 
 resource "kubernetes_deployment" "redis" {
