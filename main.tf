@@ -18,7 +18,7 @@ provider "azurerm" {
   features {}
 }
 
-kubernetes = {
+provider "kubernetes"  {
       source  = "hashicorp/kubernetes"
       version = ">= 2.0"
     }
