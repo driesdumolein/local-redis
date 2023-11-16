@@ -1,11 +1,34 @@
 terraform {
   required_providers {
-    kubernetes = {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~>3.0"
+    }
+  }
+  // backend "azurerm" {
+  //     resource_group_name  = "tfstate"
+  //     storage_account_name = "<storage_account_name>"
+  //     container_name       = "tfstate"
+  //     key                  = "terraform.tfstate"
+  // }
+
+}
+
+provider "azurerm" {
+  features {}
+}
+
+kubernetes = {
       source  = "hashicorp/kubernetes"
       version = ">= 2.0"
     }
-  }
+
+
+resource "azurerm_resource_group" "state-demo-secure" {
+  name     = "plf-state-demo-1"
+  location = "West Europe"
 }
+
 
 resource "kubernetes_deployment" "redis" {
   metadata {
