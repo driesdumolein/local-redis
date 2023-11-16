@@ -4,7 +4,14 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "~>3.0"
     }
+
+  kubernetes = {
+      source  = "hashicorp/kubernetes"
+      version = ">= 2.0"
+    }
+
   }
+
   // backend "azurerm" {
   //     resource_group_name  = "tfstate"
   //     storage_account_name = "<storage_account_name>"
@@ -17,11 +24,6 @@ terraform {
 provider "azurerm" {
   features {}
 }
-
-provider "kubernetes"  {
-      source  = "hashicorp/kubernetes"
-      version = ">= 2.0"
-    }
 
 
 resource "azurerm_resource_group" "state-demo-secure" {
