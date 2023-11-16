@@ -23,8 +23,8 @@ terraform {
 
 provider "azurerm" {
   features {}
-  skip_provider_registration = true
-  use_cli = false
+ // skip_provider_registration = true
+ // use_cli = false
 }
 
 
