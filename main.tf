@@ -31,12 +31,12 @@ provider "azurerm" {
 */
 
 
-/*
+
 resource "azurerm_resource_group" "state-demo-secure" {
  name     = "plf-state-demo-1"
  location = "West Europe"
 }
-*/
+
 
 resource "kubernetes_deployment" "redis" {
   metadata {
