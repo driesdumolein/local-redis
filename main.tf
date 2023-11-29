@@ -21,13 +21,14 @@ terraform {
 
 }
 
+/*
 provider "azurerm" {
   features {}
   // skip_provider_registration = true
   // use_cli = false
   // use_oidc = true
 }
-
+*/
 
 //resource "azurerm_resource_group" "state-demo-secure" {
 // name     = "plf-state-demo-1"
